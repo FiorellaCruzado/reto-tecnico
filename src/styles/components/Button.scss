@@ -1,0 +1,16 @@
+.button{
+    @include button-14;
+    background: $red1;
+    border: none;
+    border-radius: 8px;
+    color: $white;
+    padding: 20px 32px;
+    width: 100%; 
+
+    &--short{
+        @media only screen and (min-width: 576px)  {
+            width: 192px;    
+        } 
+    }
+
+}

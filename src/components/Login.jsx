@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { login } from '../api/user';
+import Button from './Button';
 import Input from './Input';
 
 const Login = () => {
@@ -12,6 +13,12 @@ const Login = () => {
         celular: null
     });
     const history = useHistory();
+    const [value, setValue] = useState('DNI');
+
+    const handleChange = () => {
+        setValue(value);
+        console.log(value);
+    }
 
     const handleInput = e => {
         setForm({
@@ -54,9 +61,14 @@ const Login = () => {
                 <div className='form__content__body'>
                     <div className='form__item grid'>
                         <div className='form__item__content-select form__item__content-select--groupselect grid-4'>
-                            <select name="select" className='form__item__select form__item__select--groupinput'>
-                                <option value="value1" selected>DNI</option>
-                                <option value="value2" >RUC</option>
+                            <select 
+                                value={value} 
+                                onChange={handleChange}
+                                name="select" 
+                                className='form__item__select form__item__select--groupinput'
+                            >
+                                <option value="DNI" >DNI</option>
+                                <option value="CE" >CE</option>
                             </select>
                             <img src="%PUBLIC_URL%/../images/chevrot.svg" alt="" />
                         </div>
@@ -100,7 +112,7 @@ const Login = () => {
 
                 <div className="form__content__check">
                     <div className="form__content__check__input">
-                        <input type="checkbox" id="cbox" name="politica" value="politica" />
+                        <input type="checkbox" id="cbox" name="politica" value="politica"/>
                         <label for="cbox"></label>
                     </div>
                     <div className="form__content__check__label">
@@ -118,12 +130,11 @@ const Login = () => {
                 </div>
             </div>
 
-            <button
-                className='form__button'
+            <Button
+                className='button--short'
                 type='submit'
-            >
-                COTÍZALO
-            </button>
+                text='COTÍZALO'
+            />
         </form>
 
     )

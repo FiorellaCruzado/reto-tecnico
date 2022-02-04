@@ -4,11 +4,19 @@
     display: flex;
     height: 64px;
     left: 0px;
-    // position: sticky;
-    position: fixed;
+    position: sticky;
     top: 0px;
     width: 100%;
     z-index: 1;
+    border-bottom: 1px solid $gray5;
+
+    &--home{
+        position: fixed;
+        border: none;
+        @media only screen and (min-width: 576px)  {
+            background: transparent;
+        }
+    }
     
     &__container {
         display: flex;
@@ -39,9 +47,5 @@
             padding-right: 15px;
             padding-left: 15px;
         }
-    }
-    @media only screen and (min-width: 576px)  {
-        position: fixed;
-        background: transparent;
     }
 }

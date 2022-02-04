@@ -1,15 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useLocation } from 'react-router-dom/cjs/react-router-dom.min';
 
 const Header = () => {
 
     const [offset, setOffset] = useState(0);
     const [color, setColor] = useState(null);
+    let location = useLocation();
 
     useEffect(() => {
         const onScroll = () => setOffset(window.pageYOffset);
         
-        // clean up code
         window.removeEventListener('scroll', onScroll);
         window.addEventListener('scroll', onScroll, { passive: true });
         return () => window.removeEventListener('scroll', onScroll);
@@ -17,20 +18,17 @@ const Header = () => {
 
 
     useEffect(()=>{
-        if (offset > 20) {
-            setColor({backgroundColor: '#F7F8FC'})
-        } else {
-            setColor({backgroundColor: 'transparent'})
+        if (location.pathname === '/login') {
+            setColor(offset > 20 ? {backgroundColor: '#F7F8FC'} : {backgroundColor: 'transparent'})
+        }
+        else {
+            setColor({backgroundColor: '#FFFFFF'})
         }
     },[offset]);
-    
 
-   
-    
-    // window.addEventListener('scroll', this.listenScrollEvent)
 
     return (
-        <header className="header" style={color}>
+        <header className={`header ${location.pathname === '/login' && 'header--home'} `} style={color}>
             <div className="container">
                 <div className="header__container">
                     <div className="header__container__icon">

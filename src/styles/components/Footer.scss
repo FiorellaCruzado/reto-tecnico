@@ -5,6 +5,10 @@
     align-items: center;
     border-top: 1px solid $gray5;
 
+    &--home{
+        display: none;
+    }
+    
     &__title{
         @include paragraph-12--lig;
         color: $gray3;

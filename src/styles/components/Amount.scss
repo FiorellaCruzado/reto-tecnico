@@ -1,0 +1,46 @@
+.amount{
+    margin-right: 20%;
+    margin-top: 110px;
+
+    &__content{
+        border-bottom: 1px solid $gray5;
+        padding-bottom: 20px;
+    }
+    &__title{
+        @include title-12--U;
+        color: $gray1;
+        margin-bottom: 10px;
+    }
+    &__price{
+        @include title-28;
+        color: $gray1;
+    }
+    &__text{
+        @include paragraph-12;
+        color: $gray2;
+        margin-top: 4px;
+    }
+
+    &__details{
+        display: grid;
+        grid-gap: 12px;
+        margin: 24px 0;
+    }
+
+    &__ul{
+        display: grid;
+        grid-gap: 8px;
+    }
+
+    &__titlelist{
+        @include title-16;
+        color: $gray1;
+    }
+
+    &__li{
+        @include paragraph-14;
+        color: $gray2;
+        list-style: none;
+    }
+}
+

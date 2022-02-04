@@ -1,10 +1,26 @@
 .plan{
-    background: $gray7;
+    &__aside{
+        background: $gray7;
+    }
     &__main{
-        &__content{
-            .back{
-                
+        background: $white;
+        padding-top: 48px;
+    }
+    &__content{
+        .back{
+            display: flex;
+            align-items: center;
+
+            &__button{
+                cursor: pointer;
+                margin-right: 16px;
+            }
+            &__text{
+                @include title-12--U;
             }
         }
+    }
+    &__cardauto{
+        position: relative;
     }
 }

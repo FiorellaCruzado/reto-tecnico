@@ -59,6 +59,9 @@ main {
 .d-flex {
   display: flex;
 }
+.d-grid{
+  display: grid;
+}
 .d-none{
   display: none;
 }
@@ -133,7 +136,7 @@ main {
     }
   }
 
-  @for $i from 1 through 36 {
+  @for $i from 1 through 60 {
     .grid-gap-#{$i}{
       grid-gap: ($i)+px;
     }

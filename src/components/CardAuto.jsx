@@ -12,6 +12,7 @@ const CardAuto = ({
           <div className="auto__model">
               {model}
           </div>
+          <img className='auto__img' src="%PUBLIC_URL%/../images/person_rimac.svg" alt="" />
       </div>
   );
 };
