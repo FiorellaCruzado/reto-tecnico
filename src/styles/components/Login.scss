@@ -1,0 +1,79 @@
+
+.form{
+    display: grid;
+    grid-gap: 40px;
+    padding: 15px 0;
+
+    &__content{
+        display: grid;
+        grid-gap: 24px;
+        width: 100%;
+
+        &__title{
+            @include title-28;
+            color: $gray1;
+        }
+
+        &__body{
+            display: grid;
+            grid-gap: 16px;
+        }
+
+        &__check{
+            display: flex;
+            grid-gap: 12px;
+
+            input {
+                display: none;
+            }
+
+            input[type="checkbox"] + label:before {
+                content: "";
+                float: left;
+                width: 20px;
+                height: 20px;
+                border: 1px solid $gray4;
+                border-radius: 4px;
+            }
+
+            input[type="checkbox"]:checked + label:before {
+                border-color: $green2;
+                background: $green2 url('%PUBLIC_URL%/../../../public/images/ic_check.svg') no-repeat  center;
+            }
+
+            &__label{
+                @include paragraph-12--lig;
+                cursor: pointer;
+                color: $gray2;
+
+                a span{
+                    text-decoration: underline;   
+                    font-weight: 400;
+                    color: $gray2;
+                }
+            }
+        }
+
+        @media only screen and (min-width: 576px)  {
+            width: 288px;  
+        }
+    }
+
+    &__button{
+        @include button-14;
+        background: $red1;
+        border: none;
+        border-radius: 8px;
+        color: $white;
+        padding: 20px 32px;
+        width: 100%; 
+
+        @media only screen and (min-width: 576px)  {
+            width: 192px;    
+        } 
+    }
+
+    @media only screen and (min-width: 576px)  {
+        padding: 0;  
+    }
+}

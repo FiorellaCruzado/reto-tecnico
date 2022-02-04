@@ -1,0 +1,129 @@
+/*COLOR*/
+$acian: #6F7DFF; /* Acian_2_Hover */
+$gray1: #494F66; /* Gray_1_Títulos */
+$gray2: #676F8F; /* Gray_2_Paragraph */
+$gray3: #A3ABCC; /* Gray_3 */
+$gray4: #C5CBE0; /* Gray_4 */
+$gray5: #E4E8F7; /* Gray_5 */
+$gray6: #F0F2FA; /* Gray_6 */
+$gray7: #F7F8FC; /* Gray_7 */
+$green2: #43B748; /* Green_2 */
+$red1: #EF3340;/* Red_1_Rimac */
+$white: #FFFFFF; /*white*/
+
+/*FONT*/
+$font1: Lato;
+
+
+/*MIXIN*/
+
+/* Button/Button_12px */
+@mixin button-12{
+    font-family: $font1;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+}
+
+/* Button/Button_14px */
+@mixin button-14{
+    font-family: $font1;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+}
+
+@mixin input{
+    background: $white;
+    border: 1px solid $gray4;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+/* Form/Input_Text_16px */
+@mixin input-placeholder-16{
+    font-family: $font1;
+    font-size: 16px;
+    line-height: 24px;
+    color: $gray3;
+}
+
+/* Paragraph/Reg_12px */
+@mixin paragraph-12{
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+}
+
+/* Paragraph/Reg_14px */
+@mixin paragraph-14{
+    font-size: 14px;
+    line-height: 24px;
+}
+
+/* Paragraph/Lig_12px */
+@mixin paragraph-12--lig{
+    @include paragraph-12;
+    font-weight: 300;
+}
+
+/* Title_07/Regular_16px */
+@mixin title-16{
+    font-family: $font1;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+}
+
+/* Title_05/D_Regular_28px */
+@mixin title-28{
+    font-family: $font1;
+    font-size: 28px;
+    line-height: 36px;
+    letter-spacing: -0.2px;
+}
+
+/* Title_06/Regular_20px */
+@mixin title-20{
+    font-family: $font1;
+    font-size: 20px;
+    line-height: 28px;
+}
+
+/* Title_04/M_Regular_28px */
+@mixin title-28--M{
+    @include title-28;
+    letter-spacing: -0.2px;
+}
+
+/* Title_04/D_Regular_36px */
+@mixin title-36{
+    font-family: $font1;
+    font-size: 36px;
+    line-height: 48px;
+    letter-spacing: -0.2px;
+}
+
+/* Title_09/Bol_10px_Upper */
+@mixin title-10--U{
+    font-family: $font1;
+    font-weight: bold;
+    font-size: 10px;
+    line-height: 16px;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+}
+
+@mixin form-box{
+    @include input;
+    @include title-16;
+    color: $gray1;
+    height: 48px;
+    padding: 16px;
+    width: 100%;
+}

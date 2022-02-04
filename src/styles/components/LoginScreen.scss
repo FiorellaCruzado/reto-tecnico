@@ -1,0 +1,66 @@
+.login{
+    background-color: white;
+    height: 100vh;
+
+    &__item1{
+        align-items: center;
+        background: url('%PUBLIC_URL%/../../../public/images/login_background_resp.svg') no-repeat;
+        background-size: cover;
+        display: grid;
+        justify-content: center;
+        // margin-top: -64px;
+        position: relative;
+
+        &__content{
+            display: grid;
+            grid-gap: 24px;
+            justify-content: center;
+            margin-bottom: -4rem;
+            // position: absolute;
+            // top: 50%;
+            // left: 50%;
+            // transform: translate(-50%, -50%);
+            @media only screen and (min-width: 576px)  {
+                margin-bottom: 0;
+            }
+        }
+
+        &__card{
+            display: flex;
+            align-items: center;
+        }
+
+        &__img{
+            display: flex;
+            justify-content: flex-end;
+            margin-right: -2rem;
+        }
+
+        @media only screen and (min-width: 576px)  {
+            background: url('%PUBLIC_URL%/../../../public/images/login_background.svg') no-repeat;
+            height: calc(100vh);
+            margin-top: 0;
+        }
+    }
+
+    &__item2{
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        &__content{
+            display: grid;
+            justify-content: center;
+            // position: absolute;
+            // top: 50%;
+            // left: 50%;
+            // transform: translate(-50%, -60%);
+            // width: 42%;
+        }
+    }
+
+    @media only screen and (min-width: 576px)  {
+        height: auto;  
+    }
+
+}

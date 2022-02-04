@@ -1,0 +1,45 @@
+.grouptext{
+    display: grid;
+    grid-gap: 12px;
+    width: auto;
+    
+    @media only screen and (min-width: 576px)  {
+        // padding: 15px;
+        grid-gap: 16px;
+        width: 288px;
+    }
+
+    &__title{
+        display: grid;
+        grid-gap: 4px;
+        &__header{
+            @include title-10--U;
+            align-items: flex-end;
+            color: $gray1;
+            display: flex;
+            
+            @media only screen and (min-width: 576px)  {
+                @include button-12;
+            }
+        }
+        &__body{
+            &__text{
+                @include title-28--M;
+                color: $gray1;
+
+                    &--red{
+                        color: $red1;
+                    }
+
+                @media only screen and (min-width: 576px)  {
+                    @include title-36;
+                }
+            }
+        }
+    }
+
+    &__description{
+        @include paragraph-14;
+        color: $gray2
+    }
+}

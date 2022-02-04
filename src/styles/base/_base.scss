@@ -1,0 +1,168 @@
+* {
+    font-family: "Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    box-shadow: none;
+}
+
+html, body {
+    background-color: gray;
+}
+
+main {
+    width: 100%;
+}
+
+.mt-1{
+    margin-top:5px;
+}
+
+.mt-5{
+    margin-top:20px;
+}
+
+.mr-1{
+  margin-right:5px;
+}
+
+.mr-5{
+  margin-right:20px;
+}
+
+.mb-1{
+    margin-bottom:5px;
+}
+
+.mb-5{
+    margin-bottom:20px;
+}
+
+.ml-1{
+  margin-left:5px;
+}
+
+.ml-5{
+  margin-left:20px;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.d-block{
+  display: block;
+}
+.d-flex {
+  display: flex;
+}
+.d-none{
+  display: none;
+}
+
+.grid {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(12, 1fr);
+  // grid-gap: 15px;
+}
+  
+  @for $i from 1 through 12 {
+    .grid-#{$i} {
+      grid-column: span ($i);
+    }
+  }
+
+
+  @media only screen and (min-width: 576px)  {
+    @for $i from 1 through 12 {
+      .grid-xs-#{$i} {
+        grid-column: span ($i);
+      }
+    }
+    .d-xs-none{
+      display: none !important;
+    }
+    .d-xs-block{
+      display: block;
+    }
+  }
+  
+  @media screen and (min-width: 768px) {
+    @for $i from 1 through 12 {
+      .grid-md-#{$i} {
+        grid-column: span ($i);
+      }
+    }
+    .d-md-none{
+      display: none;
+    }
+    .d-md-block{
+      display: block;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    @for $i from 1 through 12 {
+      .grid-lg-#{$i} {
+        grid-column: span ($i);
+      }
+    }
+    .d-lg-none{
+      display: none;
+    }
+    .d-lg-block{
+      display: block;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    @for $i from 1 through 12 {
+      .grid-xl-#{$i} {
+        grid-column: span ($i);
+      }
+    }
+    .d-xl-none{
+      display: none;
+    }
+    .d-xl-block{
+      display: block;
+    }
+  }
+
+  @for $i from 1 through 36 {
+    .grid-gap-#{$i}{
+      grid-gap: ($i)+px;
+    }
+  }
+
+  .container {
+    position: relative;
+    margin: 0 auto;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    width: 100%;
+    
+    @media only screen and (min-width: 576px)  {
+      padding-right: 2rem;
+      padding-left: 2rem;
+    }
+    
+    @media screen and (min-width: 768px) {
+      padding-right: 3rem;
+      padding-left: 3rem;
+    }
+    
+    @media (min-width: 992px) {
+      padding-right: 4rem;
+      padding-left: 4rem;
+    }
+    
+    @media (min-width: 1200px) {
+      padding-right: 5rem;
+      padding-left: 5rem;
+    }
+  }

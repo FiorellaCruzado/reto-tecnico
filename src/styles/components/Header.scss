@@ -1,0 +1,47 @@
+.header {
+    align-items: center;
+    // background: url('%PUBLIC_URL%/../../../public/images/login_background_resp.svg');
+    display: flex;
+    height: 64px;
+    left: 0px;
+    // position: sticky;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 1;
+    
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        padding-right: 0;
+        padding-left: 0;
+    
+        &__contact{
+            display: flex;
+            grid-gap: 23px;
+
+            &__span{
+                @include paragraph-12;
+                text-align: right;
+                color: $gray2;
+            }
+            &__a{
+                @include paragraph-14;
+                text-align: right;
+                color: $acian;
+
+                .telf{
+                    display: flex;
+                }
+            }
+        }
+        @media only screen and (min-width: 576px)  {
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+    }
+    @media only screen and (min-width: 576px)  {
+        position: fixed;
+        background: transparent;
+    }
+}

@@ -1,0 +1,33 @@
+.form__item{
+    grid-gap: 0;
+
+    &__input{
+        @include form-box;
+
+        &--groupinput{
+            border-radius: 0 4px 4px 0;
+            border-left:none;
+        }
+    }
+
+    input::placeholder {
+        @include input-placeholder-16;
+    }
+
+    &__content-select{
+        @include form-box;
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+
+        &--groupselect{
+            width: auto;
+            border-radius: 4px 0 0 4px;
+        }
+    }
+    
+    &__select{
+        appearance: none;
+        border: none;
+    }
+}

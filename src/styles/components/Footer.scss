@@ -1,0 +1,22 @@
+.footer {
+    background: #FFFFFF;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid $gray5;
+
+    &__title{
+        @include paragraph-12--lig;
+        color: $gray3;
+    }
+
+    @media only screen and (min-width: 576px)  {
+        position: absolute;
+        bottom: 2%;
+        background: transparent;
+        height: auto;
+        display: block;
+        align-items: flex-start;
+        border:none;
+    }
+}
